@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: blanchedalmond;">
+    <h1 style="border-style: 6px solid rgb(14, 11, 4); background-color: cadetblue; text-align: center;">Difference between HTTP/2 and HTTP/1.1</h1>
+    <p1>HTTP stands for hypertext transfer protocol & it is used in client-server communication. By using HTTP user sends the request to the server & the server sends the response to the user. There are several stages of development of HTTP but we will focus mainly on HTTP/1.1 which was created in 1997 & the new one is HTTP/2 which was created in 2015.</p1>
+    <h3> HTTP/1.1:</h3>
+
+ </p1>HTTP/1.1: For better understanding, let’s assume the situation when you make a request to the server for the geeksforgeeks.html page & server responds to you as a resource geeksforgeeks.html page. before sending the request and the response there is a TCP connection established between client & server. again you make a request to the server for image img.jpg & the server gives a response as an image img.jpg. the connection was not lost here after the first request because we add a keep-alive header which is the part of the request so there is an open connection between the server & client. there is a persistent connection which means several requests & responses are merged in a single connection. These are the drawbacks that lead to the creation of HTTP/2: The first problem is HTTP/1.1 transfer all the requests & responses in the plain text message form. The second one is head of line blocking in which TCP connection is blocked all other requests until the response does not receive. all the information related to the header file is repeated in every request.</p1>
+        
+    <h3> HTTP/2: HTTP/2 </h3>
+    <p1> HTTP/2: HTTP/2 was developed over the SPDY protocol. HTTP/2 works on the binary framing layer instead of textual that converts all the messages in binary format. it works on fully multiplexed that is one TCP connection is used for multiple requests. HTTP/2 uses HPACK which is used to split data from header. it compresses the header. The server sends all the other files like CSS & JS without the request of the client using the PUSH frame.</p1>
+        
+    <h2 style="font-style: italic;"> Difference between HTTP/1.1 and HTTP/2 are:</h2> 
+
+ <table>
+  <tr style="background-color: #ed6161;">
+    <th> HTTP/1.1</th>
+    <th> HTTP/2</th>
+  </tr>
+<tr style="background-color: darkgrey;">
+    <td><ol><li> works on the textual format.</li>
+        <li> There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.</li>	
+            <li>It uses requests resource Inlining for use getting multiple pages</li>
+                <li>It compresses data by itself.</li>
+    </ol></td>
+    <td><ol><li>It works on the binary protocol.</li>
+        <li>It allows multiplexing so one TCP connection is required for multiple requests.</li>
+        <li>It uses PUSH frame by server that collects all multiple pages .</li>
+        <li> It uses HPACK for data compression.</li>
+    </ol></td>
+</tr>
+ </table>
+</body>
+</html>

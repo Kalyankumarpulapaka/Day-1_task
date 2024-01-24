@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK-2</title>
+</head>
+<body style="background-color: rgb(175, 228, 225);">
+    <H1 style="border-style: 6px solid rgb(14, 11, 4); background-color: cadetblue; text-align: center; font-style: italic;">Objects and their internal representation in JavaScript</H1>
+    <P>Objects are one of the most fundamental data types in JavaScript. They are used to store collections of data, and can be thought of as real-world objects, such as a person, a car, or a house. Objects have properties, which are named values that describe the object. For example, a person object might have properties for name, age, and occupation.</P>
+    <p>Objects are stored in memory as a hash table. A hash table is a data structure that maps keys to values. In the case of objects, the keys are the property names, and the values are the property values. The hash table is implemented as a JavaScript object, with the property names as the keys and the property values as the values of the object.
+    </p>
+
+    <h2 style="border-style: 6px solid rgb(14, 11, 4); background-color: cadetblue; text-align: center;font-style: italic;">The internal representation of an object is as follows:</h2>
+    <p>A header, which contains the object's size and a pointer to the object's prototype.
+<br>A property table, which is a hash table that maps property names to property values.
+<br>A prototype chain, which is a linked list of objects that the object inherits properties from. 
+<br>The prototype chain is used to implement inheritance in JavaScript. When an object does not have a property, the JavaScript engine will look for the property in the object's prototype. If the property is not found in the prototype, the JavaScript engine will look for the property in the prototype prototype, and so on. The prototype chain ends with the Object.prototype object, which has no prototype.
+    </p>
+</body>
+</html>
